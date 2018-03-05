@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo 'Generator script for Dinkle Terminal Block DT-55, '
+echo 'Generator script for Dinkle Terminal Block DT-55'
 
 PIN_LIST=$(seq 2 30)
 PITCH=10.0
@@ -111,10 +111,10 @@ generate_draw() {
   (fp_line (start $(bc <<< "scale=2; -3.9+$DX") -7.85) (end $(bc <<< "scale=2; -3.9+$DX") 7.85) (layer F.SilkS) (width 0.12))
   (fp_line (start -6.1 7.85) (end $(bc <<< "scale=2; -3.9+$DX") 7.85) (layer F.SilkS) (width 0.12))
   (fp_line (start -6.1 7.85) (end -6.1 -7.85) (layer F.SilkS) (width 0.12))
-  (fp_line (start $(bc <<< "scale=2; -3.4+$DX") -8.35) (end $(bc <<< "scale=2; -3.4+$DX") 8.35) (layer F.CrtYd) (width 0.05))
-  (fp_line (start -6.6 8.35) (end $(bc <<< "scale=2; -3.4+$DX") 8.35) (layer F.CrtYd) (width 0.05))
-  (fp_line (start -6.6 8.35) (end -6.6 -8.35) (layer F.CrtYd) (width 0.05))
-  (fp_line (start -6.6 -8.35) (end $(bc <<< "scale=2; -3.4+$DX") -8.35) (layer F.CrtYd) (width 0.05))
+  (fp_line (start $(bc <<< "scale=2; -3.5+$DX") -8.25) (end $(bc <<< "scale=2; -3.5+$DX") 8.25) (layer F.CrtYd) (width 0.05))
+  (fp_line (start -6.5 8.25) (end $(bc <<< "scale=2; -3.5+$DX") 8.25) (layer F.CrtYd) (width 0.05))
+  (fp_line (start -6.5 8.25) (end -6.5 -8.25) (layer F.CrtYd) (width 0.05))
+  (fp_line (start -6.5 -8.25) (end $(bc <<< "scale=2; -3.5+$DX") -8.25) (layer F.CrtYd) (width 0.05))
   $PAD
   (fp_text user %R (at $(bc <<< "scale=2; -4.92+($DX/2)") -10.16) (layer F.Fab)
     (effects (font (size 1 1) (thickness 0.15)))
